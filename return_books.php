@@ -80,7 +80,7 @@ $issued_list = $conn->query("
     WHERE i.status = 'Issued'
 ");
 
-// Statistics
+
 $total_returns = $conn->query("SELECT COUNT(*) AS count FROM return_books")->fetch_assoc()['count'] ?? 0;
 $total_fines = $conn->query("SELECT SUM(fine_amount) AS total FROM return_books")->fetch_assoc()['total'] ?? 0;
 $overdue_returns = $conn->query("SELECT COUNT(*) AS count FROM return_books WHERE fine_amount > 0")->fetch_assoc()['count'] ?? 0;
