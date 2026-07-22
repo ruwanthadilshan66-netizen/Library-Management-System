@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add'])){
     exit;
 }
 
-//variable hadal thiyenne 
+ 
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['edit'])){
     $member_id = $_POST['member_id'];
     $full_name = $_POST['full_name'];
