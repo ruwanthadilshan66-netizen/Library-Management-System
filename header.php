@@ -2,7 +2,7 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-// Current Page එක හඳුනා ගැනීම
+
 $current_page = basename($_SERVER['PHP_SELF']);
 ?>
 
