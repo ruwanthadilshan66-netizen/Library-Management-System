@@ -7,7 +7,7 @@ if(!isset($_SESSION['user_id'])){
     exit;
 }
 
-// ADD BOOK
+
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add'])){
     $title = $_POST['title'];
     $author = $_POST['author'];
@@ -67,7 +67,7 @@ if(isset($_GET['delete'])){
 
 $books = $conn->query("SELECT * FROM books ORDER BY book_id DESC");
 
-// Statistics
+
 $total_books = $conn->query("SELECT COUNT(*) AS count FROM books")->fetch_assoc()['count'] ?? 0;
 $total_available = $conn->query("SELECT SUM(available_quantity) AS total FROM books")->fetch_assoc()['total'] ?? 0;
 $total_quantity = $conn->query("SELECT SUM(quantity) AS total FROM books")->fetch_assoc()['total'] ?? 0;
