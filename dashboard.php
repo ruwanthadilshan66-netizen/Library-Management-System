@@ -2,7 +2,7 @@
 session_start();
 require 'config.php';
 
-// log wela nattn index.php file ekat yawi 
+
 if(!isset($_SESSION['user_id'])){
     header("Location: index.php");
     exit;
