@@ -43,7 +43,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['edit'])){
     exit;
 }
 
-// DELETE BOOK – Issue කර ඇති පොත් පරීක්ෂා කරන්න
+
 if(isset($_GET['delete'])){
     $book_id = intval($_GET['delete']);
     
@@ -64,7 +64,7 @@ if(isset($_GET['delete'])){
     exit;
 }
 
-// Get books data
+
 $books = $conn->query("SELECT * FROM books ORDER BY book_id DESC");
 
 // Statistics
