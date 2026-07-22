@@ -47,15 +47,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['edit'])){
 if(isset($_GET['delete'])){
     $book_id = intval($_GET['delete']);
     
-    // මෙම පොත Issue කර තිබේදැයි පරීක්ෂා කරන්න
+    
     $check_query = $conn->query("SELECT COUNT(*) AS count FROM issue_books WHERE book_id = $book_id AND status = 'Issued'");
     $check = $check_query->fetch_assoc();
     
     if($check['count'] > 0){
-        // Issue කර ඇති පොතක් නිසා Error Message එක Set කරන්න
+        
         $_SESSION['error'] = "Cannot delete this book because it is currently issued to a member. Please return the book first.";
     } else {
-        // Issue කර නැති නම් Delete කරන්න
+        
         $conn->query("DELETE FROM books WHERE book_id = $book_id");
         $_SESSION['success'] = "Book deleted successfully.";
     }
