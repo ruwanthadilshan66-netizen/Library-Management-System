@@ -2,7 +2,8 @@
 session_start();
 require 'config.php';
 
-// log wela nattan login page ekatm yanwa 
+ 
+// log wela nattan login page ekatm yanwa
 if(!isset($_SESSION['user_id'])){
     header("Location: index.php");
     exit;
