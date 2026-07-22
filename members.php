@@ -35,7 +35,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['edit'])){
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $address = $_POST['address'];
-    // update query eka 
+     // update query eka
     $stmt = $conn->prepare("UPDATE members SET full_name=?, email=?, phone=?, address=? WHERE member_id=?");
     $stmt->bind_param("ssssi", $full_name, $email, $phone, $address, $member_id);
     if($stmt->execute()){
