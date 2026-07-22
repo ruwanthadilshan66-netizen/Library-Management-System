@@ -154,7 +154,7 @@ unset($_SESSION['message'], $_SESSION['msg_type']);
         gap: 8px;
     }
 
-    /* Statistics Cards - අවශ්‍ය නම් */
+    
     .stat-card {
         background: #fafafa;
         border: 1px solid #f0f0f0;
